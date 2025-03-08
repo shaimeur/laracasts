@@ -6,20 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-<?php $bookName = "The Clean Coder" ;
-        $read = false ;
+
+
+
+<h1>List of books </h1>
+<?php
+
+    $books = ["The Clean Coder",'Uml the good practice','La formule de dieu !!'] ;
+
+
 
 ?>
 
-<?php if ($read) { ?>
- <h1> I'm reading "<?php echo $bookName ;  ?>"</h1>
+<ul>
 
-<?php  } else {?>
-
-<h1> I did not read "<?php echo  $bookName ;?>" </h1>
-
-<?php } ?>
+    <?php
+        foreach ($books as $book)  : ?>
+            <li> <?= $book  ?></li>
+       <?php endforeach ?>
 
 
+</ul>
 </body>
 </html>

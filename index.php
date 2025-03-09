@@ -12,7 +12,11 @@
 <h1>List of books </h1>
 <?php
 
-    $books = ["The Clean Coder",'Uml the good practice','La formule de dieu !!'] ;
+    $books = [
+                ['bookName' => "The Clean Coder", 'author' => "John Doe",'price' => 1000],
+                ['bookName' => 'Uml the good practice', 'author' => "Nick larcen",'price' => 2000],
+                ['bookName' => 'La formule de dieu !!', 'author' => "John Red",'price' => 3000],
+            ] ;
 
 
 
@@ -22,10 +26,12 @@
 
     <?php
         foreach ($books as $book)  : ?>
-            <li> <?= $book  ?></li>
+            <li> <?= $book["bookName"]  , "Price " .$book["price"] ?></li>
        <?php endforeach ?>
 
 
 </ul>
+
+<?=  $books[1]["price"] ; ?>
 </body>
 </html>

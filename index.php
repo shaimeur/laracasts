@@ -9,9 +9,10 @@ function dd($value){
     echo "</pre>" ;
     die();
 }
-echo $_SERVER["REQUEST_URI"] ;
+// dd($_SERVER["REQUEST_URI"]);
 
-// dd($_SERVER);
+
+
 
 require "./views/index.view.php";
 

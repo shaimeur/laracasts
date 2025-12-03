@@ -1,15 +1,8 @@
 <?php
-
+// require "./utiles/utiles.php" ;
 $heading = 'Home' ;
 
-function dd($value){
 
-    echo "<pre>" ;
-    var_dump($value);
-    echo "</pre>" ;
-    die();
-}
-// dd($_SERVER["REQUEST_URI"]);
 
 
 

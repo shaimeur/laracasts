@@ -1,9 +1,8 @@
-<?php include('partials/header.php')?>
+<?php include('views/partials/header.php')?>
 
-<?php include('partials/navbar.php')?>
+<?php include('views/partials/navbar.php')?>
 
-<?php include('partials/banner.php')?>
-
+<?php include('views/partials/banner.php')?>
 
 
   <main>

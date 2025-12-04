@@ -1,13 +1,8 @@
 <?php
-// require "./utiles/utiles.php" ;
-$heading = 'Home' ;
 
-
-
-
-
-
-require "./views/index.view.php";
+// dd($heading) ;
+// dd($_SERVER["REQUEST_URI"]) ;
+require "./router/router.php";
 
 
 

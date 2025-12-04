@@ -10,8 +10,8 @@
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
               <a href="/" aria-current="page"  class="rounded-md <?php if($_SERVER["REQUEST_URI"] === "/"){echo "bg-gray-950/50 text-white";} else {echo "text-gray-300 hover:bg-white/5 hover:text-white";} ?>  px-3 py-2 text-sm font-medium  ">Home</a>
-              <a href="/about.php" class="rounded-md  <?php echo ($_SERVER["REQUEST_URI"] === "/about.php" ) ?  "bg-gray-950/50 text-white"  : "text-gray-300 hover:bg-white/5 hover:text-white" ;?> px-3 py-2 text-sm font-medium ">About</a>
-              <a href="/contact.php" class="rounded-md <?php checkURI("/contact.php") ?> px-3 py-2 text-sm font-medium ">Contact-Us</a>
+              <a href="/about" class="rounded-md  <?php echo ($_SERVER["REQUEST_URI"] === "/about" ) ?  "bg-gray-950/50 text-white"  : "text-gray-300 hover:bg-white/5 hover:text-white" ;?> px-3 py-2 text-sm font-medium ">About</a>
+              <a href="/contact" class="rounded-md <?php activePage("/contact") ?> px-3 py-2 text-sm font-medium ">Contact-Us</a>
             </div>
           </div>
         </div>

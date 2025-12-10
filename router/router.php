@@ -1,15 +1,37 @@
 <?php
+require "./utiles/utiles.php" ;
+
+$uri = parse_url($_SERVER["REQUEST_URI"])["path"] ;
+// dd($uri);
+// var_dump(explode("?",$uri));
+$router = ['/'=>'home','/contact'=>'contact','/about'=>'about'] ;
 
 
-if($_SERVER["REQUEST_URI"] === '/'){
-    require "./controllers/home.php" ;
+$found = false;
+
+foreach($router as $route =>$controller){
+    if($uri === $route){
+        $found = true;
+        require "./controllers/$controller.php";
+        break;
+    }
 }
-elseif($_SERVER["REQUEST_URI"] === '/contact'){
-    require "./controllers/contact.php" ;
-}elseif($_SERVER["REQUEST_URI"] === '/about'){
-    require "./controllers/about.php" ;
+if($found == false){
+
+    require "./views/404.php" ;
 }
-else{
-    http_response_code(404) ;
-    echo "Page Not Found" ;
-}
+
+
+
+// if($uri === '/'){
+//     require "./controllers/home.php" ;
+// }
+// elseif($uri === '/contact'){
+//     require "./controllers/contact.php" ;
+// }elseif($uri === '/about'){
+//     require "./controllers/about.php" ;
+// }
+// else{
+//     http_response_code(404) ;
+//     echo "Page Not Found" ;
+// }

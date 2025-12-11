@@ -1,9 +1,9 @@
 <?php
 require "./utiles/utiles.php" ;
 
-$uri = parse_url($_SERVER["REQUEST_URI"])["path"] ;
+$uri = explode("?",$_SERVER["REQUEST_URI"])[0] ;
 // dd($uri);
-// var_dump(explode("?",$uri));
+// echo(explode("?",$uri)[0]);
 $router = ['/'=>'home','/contact'=>'contact','/about'=>'about'] ;
 
 
@@ -16,8 +16,8 @@ foreach($router as $route =>$controller){
         break;
     }
 }
-if($found == false){
-
+if(!$found){
+    http_response_code(404) ;
     require "./views/404.php" ;
 }
 

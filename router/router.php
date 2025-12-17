@@ -4,7 +4,7 @@ require "./utiles/utiles.php" ;
 $uri = explode("?",$_SERVER["REQUEST_URI"])[0] ;
 // dd($uri);
 // echo(explode("?",$uri)[0]);
-$router = ['/'=>'home','/contact'=>'contact','/about'=>'about'] ;
+$router = ['/'=>'home','/contact'=>'contact','/about'=>'about','/login'=>'login','/register'=>'register'] ;
 
 
 $found = false;
